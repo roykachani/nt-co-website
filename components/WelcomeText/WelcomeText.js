@@ -17,7 +17,8 @@ const WelcomeText = ({ showText }) => {
 
 	return (
 		<>
-			<p id="text" className={styles.text} hidden={showText && false}></p>
+			<span id="text" className={styles.text} hidden={showText && false}></span>
+			<span className={styles.txt_cursor}>_</span>
 		</>
 	);
 };

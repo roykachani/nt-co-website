@@ -3,7 +3,7 @@ export const usePrintText = (string, on) => {
 	let arrayOfStrg = string.split('');
 	let i = 0;
 
-	let printStr = setInterval(() => {
+	let printStr = () => {
 		if (arrayOfStrg[i] === ' ') {
 			document.getElementById('text').innerHTML += arrayOfStrg[i];
 			document.getElementById('text').innerHTML += arrayOfStrg[i + 1];
@@ -14,9 +14,12 @@ export const usePrintText = (string, on) => {
 		}
 
 		if (i === arrayOfStrg.length) {
-			clearInterval(printStr);
+			clearTimeout(printStr);
 		}
-	}, 150);
+		const speed = Math.random() * (300 - 200) + 100;
+		setTimeout(printStr, speed);
+	};
+	printStr();
 
 	return [printStr];
 };
