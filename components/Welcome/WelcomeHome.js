@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Lottie from 'react-lottie-player';
 
+import { MainContext } from '../../context/mainContext';
 import Nav from '../Nav';
 import WelcomeText from '../WelcomeText';
 import lottieAnimation from '../../lottie/nt-co-final.json';
@@ -12,6 +13,19 @@ import styles from './welcomeHome.module.css';
 
 const WelcomeHome = () => {
 	const [showText, setShowText] = useState(true);
+	const { fontLoaded, windowSize } = useContext(MainContext);
+	const { width, height } = windowSize;
+
+	const responsive = {
+		desktop: 1024,
+		tablet: 768,
+		mobile: 540,
+	};
+	const MaxScaleLottie =
+		width >= responsive.desktop ? 5 : width >= responsive.tablet ? 4 : 3;
+
+	const axisY =
+		width >= responsive.desktop ? 125 : width >= responsive.tablet ? 100 : 0;
 
 	gsap.registerPlugin(ScrollTrigger);
 	const tl = useRef();
@@ -19,6 +33,7 @@ const WelcomeHome = () => {
 		tl.current = gsap
 			.timeline({
 				scrollTrigger: {
+					id: 'tl1',
 					trigger: '#lottie_container',
 					pin: true,
 					start: 'top top',
@@ -35,15 +50,23 @@ const WelcomeHome = () => {
 					},
 				},
 			})
-			.to('#lottie', { scale: 5, y: 100, duration: 10 })
-			.to('#text_container', { opacity: 1 }, '-=8');
-		ScrollTrigger.refresh();
+			.to('#lottie', { scale: MaxScaleLottie, y: axisY, duration: 10 })
+			.to('#lottie', { opacity: 0.25, duration: 7 }, '-=10')
+			.to('#text_container', { opacity: 1, duration: 0.2 }, '-=7');
+		ScrollTrigger.refresh(true);
+	};
+
+	const removeAnim = () => {
+		ScrollTrigger.getById('tl1').kill(true);
+		tl.current.kill();
 	};
 
 	useEffect(() => {
 		addAnim();
-		console.log('animation added');
-	}, []);
+		return () => {
+			removeAnim();
+		};
+	}, [width, height, fontLoaded]);
 
 	return (
 		<div className={styles.main_container}>
