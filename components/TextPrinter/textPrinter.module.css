@@ -1,0 +1,38 @@
+.text {
+	font-family: 'Telegraf-regular', sans-serif;
+	font-weight: 400;
+	font-size: 95px;
+	line-height: 120%;
+	color: #8da0ef;
+	display: inline;
+}
+.txt_cursor {
+	font-size: 95px;
+	line-height: 120%;
+	color: #8da0ef;
+	animation: blinker 1.2s linear infinite;
+	-webkit-animation: blinker 1.2s linear infinite;
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.text {
+		font-size: 42px;
+	}
+	.txt_cursor {
+		font-size: 42px;
+	}
+}
+@media screen and (max-width: 540px) {
+	.text {
+		font-size: 32px;
+	}
+	.txt_cursor {
+		font-size: 42px;
+	}
+}

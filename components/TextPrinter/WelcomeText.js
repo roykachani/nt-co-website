@@ -1,10 +1,8 @@
 import { useEffect } from 'react';
 import { usePrintText } from '../../hook/usePrintText';
-import styles from './welcome.module.css';
+import styles from './textPrinter.module.css';
 
-const WelcomeText = ({ showText }) => {
-	const text = `We are an end-to-end agency that innovates to find new trends and
-    develop game-braking metas.`;
+const TextPrinter = ({ showText, text }) => {
 	const handlePrint = () => usePrintText(text, showText);
 
 	useEffect(() => {
@@ -23,4 +21,4 @@ const WelcomeText = ({ showText }) => {
 	);
 };
 
-export default WelcomeText;
+export default TextPrinter;
