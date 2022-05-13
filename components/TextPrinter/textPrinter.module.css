@@ -14,6 +14,10 @@
 	-webkit-animation: blinker 1.2s linear infinite;
 }
 
+.skill_text_title {
+	font-size: 70px;
+}
+
 @keyframes blinker {
 	50% {
 		opacity: 0;
