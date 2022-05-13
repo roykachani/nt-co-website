@@ -1,0 +1,30 @@
+.main_container {
+	width: 100%;
+	margin-top: 290px;
+	display: flex;
+	justify-content: center;
+}
+.skills_container {
+	width: 100%;
+	margin: 0 193px;
+}
+.skill_box_subTitle {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.skill_subTitle {
+	margin: 0;
+}
+
+.our_box_description {
+	width: 65%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+.our_description {
+	font-size: 32px;
+	color: #d9e1ff;
+}
