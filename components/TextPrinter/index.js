@@ -1,1 +1,1 @@
-export { default } from './WelcomeText.js';
+export { default } from './TextPrinter.js';
