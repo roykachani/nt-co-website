@@ -1,15 +1,19 @@
-export const usePrintText = (string, on) => {
+export const usePrintText = (string, on, id) => {
 	console.log(string);
+
 	let arrayOfStrg = string.split('');
+
+	console.log(arrayOfStrg);
+
 	let i = 0;
 
 	let printStr = () => {
 		if (arrayOfStrg[i] === ' ') {
-			document.getElementById('text').innerHTML += arrayOfStrg[i];
-			document.getElementById('text').innerHTML += arrayOfStrg[i + 1];
+			document.getElementById(id).innerHTML += arrayOfStrg[i];
+			document.getElementById(id).innerHTML += arrayOfStrg[i + 1];
 			i += 2;
 		} else if (arrayOfStrg[i]) {
-			document.getElementById('text').innerHTML += arrayOfStrg[i];
+			document.getElementById(id).innerHTML += arrayOfStrg[i];
 			i++;
 		}
 
