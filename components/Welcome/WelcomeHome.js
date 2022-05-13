@@ -6,7 +6,7 @@ import Lottie from 'react-lottie-player';
 
 import { MainContext } from '../../context/mainContext';
 import Nav from '../Nav';
-import WelcomeText from '../WelcomeText';
+import TextPrinter from '../TextPrinter';
 import lottieAnimation from '../../lottie/nt-co-final.json';
 
 import styles from './welcomeHome.module.css';
@@ -15,6 +15,9 @@ const WelcomeHome = () => {
 	const [showText, setShowText] = useState(true);
 	const { fontLoaded, windowSize } = useContext(MainContext);
 	const { width, height } = windowSize;
+
+	const text = `We are an end-to-end agency that innovates to find new trends 
+	and develop game-breaking metas.`;
 
 	const responsive = {
 		desktop: 1024,
@@ -25,7 +28,7 @@ const WelcomeHome = () => {
 		width >= responsive.desktop ? 5 : width >= responsive.tablet ? 4 : 3;
 
 	const axisY =
-		width >= responsive.desktop ? 125 : width >= responsive.tablet ? 100 : 0;
+		width > responsive.desktop ? 65 : width >= responsive.tablet ? 100 : 0;
 
 	gsap.registerPlugin(ScrollTrigger);
 	const tl = useRef();
@@ -39,7 +42,7 @@ const WelcomeHome = () => {
 					start: 'top top',
 					end: '150% 45%',
 					scrub: true,
-					markers: true,
+					//markers: true,
 					onUpdate: function () {
 						//si el timeline esta en el 50% de la animacion
 						if (tl.current.progress() >= 0.4) {
@@ -52,6 +55,7 @@ const WelcomeHome = () => {
 			})
 			.to('#lottie', { scale: MaxScaleLottie, y: axisY, duration: 10 })
 			.to('#lottie', { opacity: 0.25, duration: 7 }, '-=10')
+			// .to('#text_scroll', { opacity: 0, duration: 1 })
 			.to('#text_container', { opacity: 1, duration: 0.2 }, '-=7');
 		ScrollTrigger.refresh(true);
 	};
@@ -82,10 +86,10 @@ const WelcomeHome = () => {
 					className={styles.lottie}
 				/>
 				<div className={styles.text_container} id="text_container">
-					<WelcomeText showText={showText} />
+					<TextPrinter showText={showText} text={text} id="text" />
 				</div>
-				<div className={styles.text_scroll}>
-					<p>scroll down to start playing</p>
+				<div className={styles.text_scroll} id="text_scroll">
+					<span>scroll down to start playing</span>
 				</div>
 			</div>
 		</div>
