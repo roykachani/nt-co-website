@@ -1,16 +1,26 @@
 @font-face {
-	font-family: 'Telegraf';
+	font-family: 'Telegraf-regular';
 	font-style: normal;
 	font-weight: 400;
-	src: url('/fonts/Telegraf-Bold.otf') format('.otf');
+	src: url('/fonts/Telegraf-Regular.otf') format('opentype');
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Telegraf-bold';
+	font-style: normal;
+	font-weight: bold;
+	src: url('/fonts/Telegraf-Bold.otf') format('opentype');
 	font-display: swap;
 }
 html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: 'Telegraf', sans-serif;
+	max-width: 1920px;
+	font-family: 'Telegraf-regular', 'Telegraf-bold', sans-serif;
 	background-color: #18181a;
+	color: #8da0ef;
+	scroll-behavior: smooth;
 }
 
 a {
