@@ -15,7 +15,7 @@ export const MainProvider = ({ children }) => {
 	});
 
 	useEffect(() => {
-		console.log(document.fonts);
+		//check si la fuente esta cargada
 		document.fonts.ready.then(setFontLoaded(true));
 
 		//recalcula window size
@@ -26,16 +26,14 @@ export const MainProvider = ({ children }) => {
 			});
 		};
 		handleResize();
-		//controla la cantidad de veces que el "user" hace resize para que no se repita el handleResize continuamente
+
+		//controlo la cantidad de veces que el "user" hace resize para que no se repita el handleResize continuamente
 		const debouncedHandleResize = debounce(handleResize, 200);
 
 		window.addEventListener('resize', debouncedHandleResize);
 
 		return () => window.removeEventListener('resize', debouncedHandleResize);
 	}, []);
-	useEffect(() => {
-		console.log(document.fonts);
-	}, [fontLoaded]);
 
 	return (
 		<Provider value={{ mainState, fontLoaded, windowSize }}>
