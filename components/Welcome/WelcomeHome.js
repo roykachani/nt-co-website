@@ -55,7 +55,7 @@ const WelcomeHome = () => {
 			})
 			.to('#lottie', { scale: MaxScaleLottie, y: axisY, duration: 10 })
 			.to('#lottie', { opacity: 0.25, duration: 7 }, '-=10')
-			// .to('#text_scroll', { opacity: 0, duration: 1 })
+			// .to('#text_scroll', { opacity: 0, duration: 1 }) mostrar scroll text?
 			.to('#text_container', { opacity: 1, duration: 0.2 }, '-=7');
 		ScrollTrigger.refresh(true);
 	};
