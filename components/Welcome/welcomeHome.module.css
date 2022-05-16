@@ -45,7 +45,7 @@
 
 @media screen and (max-width: 1440px) {
 	.main_container {
-		min-height: 2100px;
+		min-height: 2200px;
 	}
 	.text_container {
 		left: 0;
@@ -66,7 +66,7 @@
 }
 @media screen and (max-width: 1200px) {
 	.main_container {
-		min-height: 2100px;
+		min-height: 2200px;
 	}
 	.text_container {
 		left: 0;

@@ -20,15 +20,28 @@ const WelcomeHome = () => {
 	and develop game-breaking metas.`;
 
 	const responsive = {
-		desktop: 1024,
+		desktop: 1440,
+		laptop: 1024,
 		tablet: 768,
 		mobile: 540,
 	};
 	const MaxScaleLottie =
-		width >= responsive.desktop ? 5 : width >= responsive.tablet ? 4 : 3;
+		width > responsive.desktop
+			? 5
+			: width >= responsive.laptop
+			? 4.5
+			: width >= responsive.tablet
+			? 4
+			: 3;
 
 	const axisY =
-		width > responsive.desktop ? 65 : width >= responsive.tablet ? 100 : 0;
+		width > responsive.desktop
+			? 65
+			: width >= responsive.laptop
+			? 50
+			: width >= responsive.tablet
+			? 100
+			: 0;
 
 	gsap.registerPlugin(ScrollTrigger);
 	const tl = useRef();
