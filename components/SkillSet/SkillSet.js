@@ -21,8 +21,8 @@ const SkillSet = () => {
 			scrollTrigger: {
 				id: 'tl2',
 				trigger: '#skills',
-				// start: 'top top',
-				// end: '150% 45%',
+				// start: 'top 75%',
+				// end: 'bottom bottom',
 				scrub: true,
 				// markers: true,
 				onEnter: function () {
@@ -54,12 +54,12 @@ const SkillSet = () => {
 							<TextPrinter showText={showText} text={text} id="our_skills" />
 						</h2>
 					</div>
-					<div className={styles.our_box_description}>
-						<p className={styles.our_description}>
+					<div className={styles.our_box_description} id="our_box_description">
+						<span className={styles.our_description} id="our_description">
 							We aid our clients from the early stages of a project, all the way
 							up to the endgame. We have the expertise and the right tools to
 							help Esports organizations level up their brands.
-						</p>
+						</span>
 					</div>
 					<div className={styles.skill_cards_container}>
 						<div className={styles.card}></div>

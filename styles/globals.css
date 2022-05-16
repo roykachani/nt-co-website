@@ -15,7 +15,7 @@
 html,
 body {
 	padding: 0;
-	margin: 0;
+	margin: 0 auto;
 	max-width: 1920px;
 	font-family: 'Telegraf-regular', 'Telegraf-bold', sans-serif;
 	background-color: #18181a;

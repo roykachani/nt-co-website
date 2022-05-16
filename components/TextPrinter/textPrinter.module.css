@@ -23,6 +23,25 @@
 		opacity: 0;
 	}
 }
+@media screen and (max-width: 1440px) {
+	.text {
+		font-size: 82px;
+	}
+	.txt_cursor {
+		font-size: 82px;
+	}
+}
+@media screen and (max-width: 1200px) {
+	.text {
+		font-size: 62px;
+	}
+	.txt_cursor {
+		font-size: 62px;
+	}
+	.skill_text_title {
+		font-size: 56px;
+	}
+}
 
 @media screen and (max-width: 768px) {
 	.text {
@@ -38,5 +57,8 @@
 	}
 	.txt_cursor {
 		font-size: 42px;
+	}
+	.skill_text_title {
+		font-size: 32px;
 	}
 }

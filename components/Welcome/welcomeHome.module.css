@@ -9,7 +9,7 @@
 .text_container {
 	position: absolute;
 	left: 172px;
-	max-width: 66%;
+	width: 66%;
 	height: auto;
 	opacity: 0;
 	top: 276px;
@@ -43,12 +43,15 @@
 	color: #8da0ef;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1440px) {
+	.main_container {
+		min-height: 2100px;
+	}
 	.text_container {
 		left: 0;
-		width: 70%;
+		width: 75%;
 		height: 100px;
-		margin-left: 50px;
+		margin-left: 135px;
 		top: 250px;
 	}
 
@@ -56,19 +59,40 @@
 		margin-top: 110px;
 	}
 	.text_scroll {
-		top: 770px;
 		margin-right: 0;
-		right: -510px;
+		left: 980px;
+		top: 870px;
+	}
+}
+@media screen and (max-width: 1200px) {
+	.main_container {
+		min-height: 2100px;
+	}
+	.text_container {
+		left: 0;
+		width: 80%;
+		height: 100px;
+		margin-left: 80px;
+		top: 350px;
+	}
+
+	.lottie {
+		margin-top: 110px;
+	}
+	.text_scroll {
+		margin-right: 0;
+		left: 580px;
+		top: 870px;
 	}
 }
 
 @media screen and (max-width: 768px) {
 	.text_container {
 		left: 0;
-		width: 70%;
+		width: 72%;
 		height: 100px;
 		margin-left: 50px;
-		top: 250px;
+		top: 340px;
 	}
 
 	.lottie {
@@ -76,15 +100,18 @@
 	}
 	.text_scroll {
 		font-size: 24px;
-		top: 770px;
+		top: 850px;
 		margin-right: 0;
-		right: -510px;
+		left: 370px;
 	}
 }
 @media screen and (max-width: 540px) {
+	.main_container {
+		min-height: 1650px;
+	}
 	.text_container {
 		left: 0;
-		width: 85%;
+		width: 90%;
 		height: 100px;
 		margin-left: 20px;
 		top: 250px;
@@ -103,14 +130,14 @@
 	}
 }
 
-@media screen and (max-height: 640px) {
+@media screen and (max-height: 670px) {
+	.main_container {
+		min-height: 1350px;
+	}
+	.text_container {
+		top: 160px;
+	}
 	.text_scroll {
-		font-size: 20px;
 		top: 570px;
-		left: 0;
-		margin-right: 0;
-		height: auto;
-		display: flex;
-		justify-content: center;
 	}
 }
