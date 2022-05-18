@@ -29,7 +29,24 @@
 	font-size: 32px;
 	color: #d9e1ff;
 }
+.skill_cards_container {
+	margin-top: 95px;
+	width: 100%;
+}
+.wrapper_cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
 
+.card {
+	width: 243px;
+	height: 360px;
+	border: 1px solid #d9e1ff;
+	border-radius: 26px;
+	margin-bottom: 67px;
+}
 /* media queries */
 
 @media screen and (max-width: 1440px) {
@@ -39,6 +56,12 @@
 	.skills_container {
 		width: 100%;
 		margin: 0 163px;
+	}
+	.wrapper_cards {
+		justify-content: center;
+	}
+	.card {
+		margin-right: 35px;
 	}
 }
 

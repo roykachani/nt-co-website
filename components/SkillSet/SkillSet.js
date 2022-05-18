@@ -2,16 +2,16 @@ import { useState, useEffect, useRef, useContext } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
-import TextPrinter from '../TextPrinter/TextPrinter';
 import { MainContext } from '../../context/mainContext';
+import TextPrinter from '../TextPrinter/TextPrinter';
+import Card from '../Card';
 
 import styles from './SkillSet.module.css';
 
-const SkillSet = () => {
+const SkillSet = ({ skills, texts }) => {
 	const [showText, setShowText] = useState(true);
 	const { fontLoaded, windowSize } = useContext(MainContext);
 	const { width, height } = windowSize;
-	const text = `Our skillset`;
 
 	gsap.registerPlugin(ScrollTrigger);
 
@@ -51,18 +51,24 @@ const SkillSet = () => {
 				<div className={styles.skills_container}>
 					<div className={styles.skill_box_subTitle}>
 						<h2 className={styles.skill_subTitle} id="skills">
-							<TextPrinter showText={showText} text={text} id="our_skills" />
+							<TextPrinter
+								showText={showText}
+								text={texts.title}
+								id="our_skills"
+							/>
 						</h2>
 					</div>
 					<div className={styles.our_box_description} id="our_box_description">
 						<span className={styles.our_description} id="our_description">
-							We aid our clients from the early stages of a project, all the way
-							up to the endgame. We have the expertise and the right tools to
-							help Esports organizations level up their brands.
+							{texts.description}
 						</span>
 					</div>
 					<div className={styles.skill_cards_container}>
-						<div className={styles.card}></div>
+						<div className={styles.wrapper_cards}>
+							{skills.map((skill, index) => (
+								<Card key={index} skill={skill} />
+							))}
+						</div>
 					</div>
 				</div>
 			</div>
