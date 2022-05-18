@@ -1,0 +1,52 @@
+{
+	"info": {
+		"name": "Nice Try Company",
+		"alias": "NT Co.",
+		"commerce": "digital agency",
+		"description": "We are an end-to-end agency that innovates to find new trends and develop game-breaking metas.",
+		"website": "www.nice-try.co",
+		"email": "newbiz@ntcompany.co",
+		"phone": "+54 9 11 3696-9699"
+	},
+	"texts": {
+		"about": "We are an end-to-end agency that innovates to find new trends and develop game-breaking metas.",
+		"skills": {
+			"title": "Our skillset",
+			"description": "We aid our clients from the early stages of a project, all the way up to the endgame. We have the expertise and the right tools to help Esports organizations level up their brands."
+		},
+		"meet": "Our Team Members were part of these rosters:",
+		"contact": "Let’s meet at the arena"
+	},
+	"skills": [
+		{
+			"id": "1",
+			"name": "strategy",
+			"description": ["Team management", "Talent management", "Streams"],
+			"symbol": "circle"
+		},
+		{
+			"id": "2",
+			"name": "events & tournaments",
+			"description": ["Team management", "Talent management", "Streams"],
+			"symbol": "diamond"
+		},
+		{
+			"id": "3",
+			"name": "desing",
+			"description": ["Team management", "Talent management", "Streams"],
+			"symbol": "hexagon"
+		},
+		{
+			"id": "4",
+			"name": "product development",
+			"description": ["Team management", "Talent management", "Streams"],
+			"symbol": "triangle"
+		},
+		{
+			"id": "5",
+			"name": "content production",
+			"description": ["Team management", "Talent management", "Streams"],
+			"symbol": "star"
+		}
+	]
+}

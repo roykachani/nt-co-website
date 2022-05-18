@@ -11,13 +11,10 @@ import lottieAnimation from '../../lottie/nt-co-final.json';
 
 import styles from './welcomeHome.module.css';
 
-const WelcomeHome = () => {
+const WelcomeHome = ({ text }) => {
 	const [showText, setShowText] = useState(true);
 	const { fontLoaded, windowSize } = useContext(MainContext);
 	const { width, height } = windowSize;
-
-	const text = `We are an end-to-end agency that innovates to find new trends 
-	and develop game-breaking metas.`;
 
 	const responsive = {
 		desktop: 1440,
@@ -44,6 +41,7 @@ const WelcomeHome = () => {
 			: 0;
 
 	gsap.registerPlugin(ScrollTrigger);
+
 	const tl = useRef();
 	const addAnim = () => {
 		tl.current = gsap
