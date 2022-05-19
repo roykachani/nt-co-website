@@ -41,11 +41,9 @@ const Card = ({ skill }) => {
 						<div className={styles.card_content}>
 							{description.map((item, index) => {
 								return (
-									<>
-										<h4 key={index} className={styles.content_description}>
-											{item}
-										</h4>
-									</>
+									<div key={skill.id + index}>
+										<h4 className={styles.content_description}>{item}</h4>
+									</div>
 								);
 							})}
 						</div>
