@@ -20,6 +20,7 @@ const Marq = () => {
 								pauseOnHover={true}
 								gradient={false}
 								className={styles.marquee_content}
+								style={{ width: '98%', height: '100%' }}
 							>
 								<div className={styles.marquee}>Member 1</div>
 								<div className={styles.marquee}>Member 2</div>

@@ -32,7 +32,7 @@
 	display: flex;
 	/* margin-left: 30px; */
 	width: 50.4%;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	overflow: hidden;
 }
@@ -49,7 +49,9 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	opacity: 0.5;
 }
 .overlay::before {
@@ -80,12 +82,56 @@
 
 .marquee {
 	/* opacity: 0.5; */
+	font-size: 40px;
 	height: 48px;
 	width: 159px;
-	background: #18181a;
+	color: #18181a;
 	font-weight: bold;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin-right: 48px;
+}
+
+@media screen and (max-width: 1440px) {
+	.marquee_container {
+	}
+	.marquee_span {
+		font-size: 30px;
+	}
+	.marquee {
+		font-size: 30px;
+	}
+}
+@media screen and (max-width: 1200px) {
+	.marquee_container {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.marquee_span {
+		font-size: 30px;
+	}
+	.marquee {
+		font-size: 30px;
+	}
+	.marquee_members_box {
+		width: 70%;
+	}
+
+	.overlay::before {
+		background: linear-gradient(
+			90deg,
+			#5888ee 0%,
+			#6589e7 20%,
+			rgba(255, 255, 255, 0) 100%
+		);
+	}
+	.overlay::after {
+		background: linear-gradient(
+			-90deg,
+			#c293b3 0%,
+			rgba(255, 255, 255, 0) 100%
+		);
+	}
 }
