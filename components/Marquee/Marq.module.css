@@ -31,7 +31,7 @@
 .marquee_members_box {
 	display: flex;
 	/* margin-left: 30px; */
-	width: 50.4%;
+	width: 100%;
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
@@ -52,7 +52,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	opacity: 0.5;
+	/* opacity: 0.5; */
 }
 .overlay::before {
 	content: '';
@@ -61,12 +61,7 @@
 	left: 0;
 	width: 20%;
 	height: 100%;
-	background: linear-gradient(
-		90deg,
-		rgba(124, 140, 218, 1) 0%,
-		rgba(131, 146, 220, 1) 33%,
-		rgba(255, 255, 255, 0) 100%
-	);
+	background: linear-gradient(90deg, #5488f1 0%, rgba(255, 255, 255, 0) 45%);
 	z-index: 2;
 }
 .overlay::after {
@@ -74,10 +69,14 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 20%;
+	width: 10%;
 	height: 100%;
-	background: linear-gradient(-90deg, #e8979f 0%, rgba(255, 255, 255, 0) 100%);
+	background: linear-gradient(-90deg, #e8979f 0%, rgba(255, 255, 255, 0) 45%);
 	z-index: 2;
+}
+
+.marquee_text {
+	margin-right: 30px;
 }
 
 .marquee {
@@ -87,9 +86,9 @@
 	/* width: 159px; */
 	color: #18181a;
 	font-weight: bold;
-	/* display: flex; */
-	/* align-items: center; */
-	/* justify-content: center; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	margin-right: 48px;
 }
 /* 
