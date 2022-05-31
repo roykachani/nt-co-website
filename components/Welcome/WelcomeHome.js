@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { useState, useEffect, useRef, useContext } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -17,13 +16,14 @@ const WelcomeHome = ({ text }) => {
 	const { width, height } = windowSize;
 
 	const responsive = {
-		desktop: 1440,
+		desktopA: 1680,
+		desktopB: 1440,
 		laptop: 1024,
 		tablet: 768,
 		mobile: 540,
 	};
 	const MaxScaleLottie =
-		width > responsive.desktop
+		width > responsive.desktopB
 			? 5
 			: width >= responsive.laptop
 			? 4.5
@@ -32,10 +32,12 @@ const WelcomeHome = ({ text }) => {
 			: 3;
 
 	const axisY =
-		width > responsive.desktop
+		width > responsive.desktopA
 			? 65
+			: width > responsive.desktopB
+			? 120
 			: width >= responsive.laptop
-			? 50
+			? 70
 			: width >= responsive.tablet
 			? 100
 			: 0;
@@ -53,7 +55,7 @@ const WelcomeHome = ({ text }) => {
 					start: 'top top',
 					end: '150% 45%',
 					scrub: true,
-					//markers: true,
+					// markers: true,
 					onUpdate: function () {
 						//si el timeline esta en el 50% de la animacion
 						if (tl.current.progress() >= 0.4) {
