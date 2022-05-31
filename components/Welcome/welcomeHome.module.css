@@ -12,7 +12,7 @@
 	width: 66%;
 	height: auto;
 	opacity: 0;
-	top: 276px;
+	top: 260px;
 }
 
 .lottie_container {
@@ -43,46 +43,64 @@
 	color: #8da0ef;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1680px) {
 	.main_container {
-		min-height: 2200px;
+		min-height: 1950px;
 	}
 	.text_container {
-		left: 0;
-		width: 75%;
+		left: 175px;
+		width: 61%;
 		height: 100px;
-		margin-left: 135px;
+		top: 270px;
+	}
+
+	.lottie {
+		margin-top: 90px;
+	}
+	.text_scroll {
+		margin-right: 0;
+		left: 1193px;
+		top: 870px;
+	}
+}
+@media screen and (max-width: 1440px) {
+	.main_container {
+		min-height: 1800px;
+	}
+	.text_container {
+		left: 175px;
+		width: 65%;
+		height: 100px;
 		top: 250px;
 	}
 
 	.lottie {
-		margin-top: 110px;
+		margin-top: 50px;
 	}
 	.text_scroll {
 		margin-right: 0;
-		left: 980px;
-		top: 870px;
+		left: 970px;
+		top: 735px;
 	}
 }
 @media screen and (max-width: 1200px) {
 	.main_container {
-		min-height: 2200px;
+		min-height: 1700px;
 	}
 	.text_container {
-		left: 0;
-		width: 80%;
+		left: 120px;
+		width: 73%;
 		height: 100px;
-		margin-left: 80px;
-		top: 350px;
+		top: 220px;
 	}
 
 	.lottie {
-		margin-top: 110px;
+		margin-top: 30px;
 	}
 	.text_scroll {
 		margin-right: 0;
-		left: 580px;
-		top: 870px;
+		left: 570px;
+		top: 710px;
 	}
 }
 
