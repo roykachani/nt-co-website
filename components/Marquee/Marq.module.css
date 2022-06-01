@@ -1,96 +1,114 @@
 .main_container {
-	width: 100%;
-	height: 140px;
-	margin-top: 180px;
-	margin-bottom: 50px;
+  width: 100%;
+  height: 140px;
+  margin-top: 180px;
+  margin-bottom: 50px;
 }
 .marquee_container {
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(
-		256deg,
-		#e8979f 0%,
-		#c293b3 15%,
-		#9b8fc9 33%,
-		#7c8cda 51%,
-		#6589e7 68%,
-		#5888ee 85%,
-		#5488f1 100%
-	);
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    256deg,
+    #e8979f 0%,
+    #c293b3 15%,
+    #9b8fc9 33%,
+    #7c8cda 51%,
+    #6589e7 68%,
+    #5888ee 85%,
+    #5488f1 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .marquee_span {
-	font-size: 40px;
-	font-family: 'Telegraf-Bold';
-	font-weight: bold;
-	color: #18181a;
+  font-size: 40px;
+  font-family: 'Telegraf-Bold';
+  font-weight: bold;
+  color: #18181a;
 }
 
 .marquee_members_box {
-	display: flex;
-	/* margin-left: 30px; */
-	width: 100%;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
+  display: flex;
+  /* margin-left: 30px; */
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 .marquee_content {
-	width: 100%;
-	height: 100%;
-	position: relative;
-	z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .overlay {
-	position: relative;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	/* opacity: 0.5; */
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* opacity: 0.5; */
 }
 .overlay::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 20%;
-	height: 100%;
-	background: linear-gradient(90deg, #5488f1 0%, rgba(255, 255, 255, 0) 45%);
-	z-index: 2;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(90deg, #5488f1 0%, rgba(255, 255, 255, 0) 45%);
+  z-index: 2;
 }
 .overlay::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 10%;
-	height: 100%;
-	background: linear-gradient(-90deg, #e8979f 0%, rgba(255, 255, 255, 0) 45%);
-	z-index: 2;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10%;
+  height: 100%;
+  background: linear-gradient(-90deg, #e8979f 0%, rgba(255, 255, 255, 0) 45%);
+  z-index: 2;
 }
 
 .marquee_text {
-	margin-right: 30px;
+  margin-right: 30px;
 }
 
 .marquee {
-	/* opacity: 0.5; */
-	font-size: 40px;
-	height: 48px;
-	/* width: 159px; */
-	color: #18181a;
-	font-weight: bold;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-right: 48px;
+  /* opacity: 0.5; */
+  font-size: 40px;
+  height: 48px;
+  /* width: 159px; */
+  color: #18181a;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 48px;
 }
+
+@media screen and (max-width: 540px) {
+  .main_container {
+    height: 110px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+
+  .marquee_span {
+    font-size: 24px;
+  }
+
+  .marquee {
+    font-size: 24px;
+    height: 30px;
+  }
+}
+
 /* 
 @media screen and (max-width: 1440px) {
 	.marquee_container {
