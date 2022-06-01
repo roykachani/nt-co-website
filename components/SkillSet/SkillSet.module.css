@@ -1,121 +1,128 @@
 .main_container {
-	width: 100%;
-	margin-top: 290px;
-	display: flex;
-	justify-content: center;
+  width: 100%;
+  margin-top: 290px;
+  display: flex;
+  justify-content: center;
 }
 .skills_container {
-	width: 100%;
-	margin: 0 193px;
+  width: 100%;
+  margin: 0 193px;
 }
 .skill_box_subTitle {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .skill_subTitle {
-	margin: 0;
+  margin: 0;
 }
 
 .our_box_description {
-	margin: 25px 0;
-	width: 65%;
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
+  margin: 25px 0;
+  width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 .our_description {
-	font-size: 32px;
-	color: #d9e1ff;
+  font-size: 32px;
+  color: #d9e1ff;
+  line-height: 130%;
 }
 .skill_cards_container {
-	margin-top: 95px;
-	width: 100%;
+  margin-top: 95px;
+  width: 100%;
 }
 .wrapper_cards {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.card {
+/* .card {
 	width: 243px;
 	height: 360px;
 	border: 1px solid #d9e1ff;
 	border-radius: 26px;
 	margin-bottom: 67px;
-}
+} */
 /* media queries */
 
+@media screen and (max-width: 1680px) {
+  .main_container {
+    margin-top: 113px;
+  }
+  .skills_container {
+    width: 100%;
+    margin: 0 163px;
+  }
+
+  .wrapper_cards {
+    justify-content: space-between;
+  }
+}
 @media screen and (max-width: 1440px) {
-	.main_container {
-		margin-top: 113px;
-	}
-	.skills_container {
-		width: 100%;
-		margin: 0 163px;
-	}
-	.wrapper_cards {
-		justify-content: center;
-	}
-	.card {
-		margin-right: 35px;
-	}
 }
 
 @media screen and (max-width: 1200px) {
-	.main_container {
-		margin-top: 113px;
-	}
-	.skills_container {
-		width: 100%;
-		margin: 0 163px;
-	}
-	.our_box_description {
-		width: 87%;
-	}
-	.our_description {
-		font-size: 28px;
-		color: #d9e1ff;
-	}
+  .main_container {
+    margin-top: 113px;
+  }
+  .skills_container {
+    width: 100%;
+    margin: 0 163px;
+  }
+  .our_box_description {
+    width: 87%;
+  }
+  .our_description {
+    font-size: 28px;
+    color: #d9e1ff;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .wrapper_cards {
+    justify-content: space-evenly;
+  }
 }
 
 @media screen and (max-width: 768px) {
-	.main_container {
-		margin-top: 143px;
-	}
-	.skills_container {
-		width: 100%;
-		margin: 0 50px;
-	}
-	.our_box_description {
-		width: 87%;
-	}
-	.our_description {
-		font-size: 28px;
-		color: #d9e1ff;
-	}
+  .main_container {
+    margin-top: 143px;
+  }
+  .skills_container {
+    width: 100%;
+    margin: 0 50px;
+  }
+  .our_box_description {
+    width: 87%;
+  }
+
+  .our_description {
+    font-size: 28px;
+    color: #d9e1ff;
+  }
 }
 @media screen and (max-width: 540px) {
-	.main_container {
-		margin-top: 80px;
-	}
-	.skills_container {
-		margin: 0 20px;
-	}
-	.our_box_description {
-		margin-top: 10px;
-		width: 80%;
-	}
-	.our_description {
-		font-size: 20px;
-	}
+  .main_container {
+    margin-top: 80px;
+  }
+  .skills_container {
+    margin: 0 20px;
+  }
+  .our_box_description {
+    margin-top: 10px;
+    width: 95%;
+  }
+  .our_description {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-height: 670px) {
-	.main_container {
-		margin-top: 100px;
-	}
+  .main_container {
+    margin-top: 100px;
+  }
 }
