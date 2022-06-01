@@ -1,161 +1,161 @@
 .main_container {
-	position: relative;
-	width: 100%;
-	min-height: 2000px;
-	overflow: hidden;
-	z-index: 1;
+  position: relative;
+  width: 100%;
+  min-height: 2000px;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .text_container {
-	position: absolute;
-	left: 172px;
-	width: 66%;
-	height: auto;
-	opacity: 0;
-	top: 260px;
+  position: absolute;
+  left: 172px;
+  width: 66%;
+  height: auto;
+  opacity: 0;
+  top: 260px;
 }
 
 .lottie_container {
-	position: absolute;
-	z-index: -1;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-	height: 100vh;
+  position: absolute;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
 }
 
 .lottie {
-	margin-top: 150px;
+  margin-top: 150px;
 }
 .text_scroll {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 870px;
-	left: 1433px;
-	margin-right: 70px;
-	z-index: 1;
-	font-family: 'telegraf-regular', sans-serif;
-	letter-spacing: 1.68px;
-	font-size: 28px;
-	font-weight: 400;
-	color: #8da0ef;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 870px;
+  left: 1433px;
+  margin-right: 70px;
+  z-index: 1;
+  font-family: 'telegraf-regular', sans-serif;
+  letter-spacing: 1.68px;
+  font-size: 28px;
+  font-weight: 400;
+  color: #8da0ef;
 }
 
 @media screen and (max-width: 1680px) {
-	.main_container {
-		min-height: 1950px;
-	}
-	.text_container {
-		left: 175px;
-		width: 61%;
-		height: 100px;
-		top: 270px;
-	}
+  .main_container {
+    min-height: 1950px;
+  }
+  .text_container {
+    left: 175px;
+    width: 61%;
+    height: 100px;
+    top: 270px;
+  }
 
-	.lottie {
-		margin-top: 90px;
-	}
-	.text_scroll {
-		margin-right: 0;
-		left: 1193px;
-		top: 870px;
-	}
+  .lottie {
+    margin-top: 90px;
+  }
+  .text_scroll {
+    margin-right: 0;
+    left: 1193px;
+    top: 870px;
+  }
 }
 @media screen and (max-width: 1440px) {
-	.main_container {
-		min-height: 1800px;
-	}
-	.text_container {
-		left: 175px;
-		width: 65%;
-		height: 100px;
-		top: 250px;
-	}
+  .main_container {
+    min-height: 1800px;
+  }
+  .text_container {
+    left: 175px;
+    width: 65%;
+    height: 100px;
+    top: 250px;
+  }
 
-	.lottie {
-		margin-top: 50px;
-	}
-	.text_scroll {
-		margin-right: 0;
-		left: 970px;
-		top: 735px;
-	}
+  .lottie {
+    margin-top: 50px;
+  }
+  .text_scroll {
+    margin-right: 0;
+    left: 970px;
+    top: 735px;
+  }
 }
 @media screen and (max-width: 1200px) {
-	.main_container {
-		min-height: 1700px;
-	}
-	.text_container {
-		left: 120px;
-		width: 73%;
-		height: 100px;
-		top: 220px;
-	}
+  .main_container {
+    min-height: 1700px;
+  }
+  .text_container {
+    left: 120px;
+    width: 73%;
+    height: 100px;
+    top: 220px;
+  }
 
-	.lottie {
-		margin-top: 30px;
-	}
-	.text_scroll {
-		margin-right: 0;
-		left: 570px;
-		top: 710px;
-	}
+  .lottie {
+    margin-top: 30px;
+  }
+  .text_scroll {
+    margin-right: 0;
+    left: 570px;
+    top: 710px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-	.text_container {
-		left: 0;
-		width: 72%;
-		height: 100px;
-		margin-left: 50px;
-		top: 340px;
-	}
+  .text_container {
+    left: 0;
+    width: 72%;
+    height: 100px;
+    margin-left: 50px;
+    top: 340px;
+  }
 
-	.lottie {
-		margin-top: 120px;
-	}
-	.text_scroll {
-		font-size: 24px;
-		top: 850px;
-		margin-right: 0;
-		left: 370px;
-	}
+  .lottie {
+    margin-top: 120px;
+  }
+  .text_scroll {
+    font-size: 24px;
+    top: 850px;
+    margin-right: 0;
+    left: 370px;
+  }
 }
 @media screen and (max-width: 540px) {
-	.main_container {
-		min-height: 1650px;
-	}
-	.text_container {
-		left: 0;
-		width: 90%;
-		height: 100px;
-		margin-left: 20px;
-		top: 250px;
-	}
-	.lottie {
-		margin-top: 50px;
-	}
-	.text_scroll {
-		font-size: 20px;
-		top: 670px;
-		left: 0;
-		margin-right: 0;
-		height: auto;
-		display: flex;
-		justify-content: center;
-	}
+  .main_container {
+    min-height: 1650px;
+  }
+  .text_container {
+    left: 0;
+    width: 93%;
+    height: 100px;
+    margin-left: 20px;
+    top: 250px;
+  }
+  .lottie {
+    margin-top: 50px;
+  }
+  .text_scroll {
+    font-size: 16px;
+    top: 670px;
+    left: 50px;
+    margin-right: 0;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 @media screen and (max-height: 670px) {
-	.main_container {
-		min-height: 1350px;
-	}
-	.text_container {
-		top: 160px;
-	}
-	.text_scroll {
-		top: 570px;
-	}
+  .main_container {
+    min-height: 1350px;
+  }
+  .text_container {
+    top: 160px;
+  }
+  .text_scroll {
+    top: 570px;
+  }
 }
