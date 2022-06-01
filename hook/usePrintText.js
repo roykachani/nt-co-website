@@ -20,7 +20,7 @@ export const usePrintText = (string, on, id) => {
 		if (i === arrayOfStrg.length) {
 			clearTimeout(printStr);
 		}
-		const speed = Math.random() * (300 - 200) + 100;
+		const speed = Math.random() * (300 - 270) + 100;
 		setTimeout(printStr, speed);
 	};
 	printStr();
