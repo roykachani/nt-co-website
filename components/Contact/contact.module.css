@@ -1,0 +1,123 @@
+.main_container {
+  width: 100%;
+  margin-top: 79px;
+  display: flex;
+  justify-content: center;
+}
+.contact_container {
+  width: 100%;
+  margin: 140px 172px;
+}
+.contact_subTitle_box {
+  margin-bottom: 109px;
+}
+.contact_email_box {
+  display: flex;
+}
+
+.contact_box_left {
+  margin-right: 143px;
+  display: flex;
+  align-items: center;
+}
+.contact_box_right {
+  display: flex;
+  align-items: center;
+}
+
+.contact_figure_circle {
+  margin-right: 37px;
+  width: 74px;
+  height: 74px;
+  border: 1px solid #8da0ef;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact_figure_circle_inner {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #8da0ef;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.contact_figure_diamond {
+  margin-right: 56px;
+  width: 72.92px;
+  height: 72.92px;
+  border: 1px solid #8da0ef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+.contact_figure_diamond_inner {
+  width: 39.49px;
+  height: 39.49px;
+  border: 1px solid #8da0ef;
+}
+.email {
+  margin: 0;
+  font-size: 32px;
+  user-select: none;
+  cursor: pointer;
+  display: block;
+  position: relative;
+}
+.iconCopy {
+  position: absolute;
+  top: -30px;
+  right: -25px;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+}
+.email:hover .iconCopy {
+  opacity: 1;
+  transition: 0.8s ease-in-out;
+  -webkit-transition: 0.8s ease-in-out;
+  -moz-transition: 0.8s ease-in-out;
+  -ms-transition: 0.8s ease-in-out;
+  -o-transition: 0.8s ease-in-out;
+}
+.notCopiedLink {
+  text-align: center;
+  opacity: 0;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  user-select: none;
+  background: linear-gradient(
+    256deg,
+    #e8979f 0%,
+    #c293b3 15%,
+    #9b8fc9 33%,
+    #7c8cda 51%,
+    #6589e7 68%,
+    #5888ee 85%,
+    #5488f1 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.copiedLink {
+  opacity: 1;
+  transition: 0.8s ease-in-out all;
+  -webkit-transition: 0.8s ease-in-out all;
+  -moz-transition: 0.8s ease-in-out all;
+  -ms-transition: 0.8s ease-in-out all;
+  -o-transition: 0.8s ease-in-out all;
+}

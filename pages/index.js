@@ -6,6 +6,7 @@ import SkillSet from '../components/SkillSet';
 import styles from '../styles/Home.module.css';
 import api from '../utils/api';
 import Marquee from '../components/Marquee';
+import Contact from '../components/Contact/Contact';
 
 export default function Home({ data }) {
   const { info, texts, skills } = data;
@@ -22,7 +23,9 @@ export default function Home({ data }) {
         <SkillSet skills={skills} texts={texts.skills} />
         <Marquee />
       </main>
-      <footer></footer>
+      <footer>
+        <Contact text={texts.contact} info={info.email} />
+      </footer>
     </>
   );
 }
