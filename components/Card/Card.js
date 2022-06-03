@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 
-import Triangle from '../Icons/Triangle';
 import styles from './card.module.css';
 
 const Card = ({ skill }) => {
@@ -34,7 +33,6 @@ const Card = ({ skill }) => {
           <div className={`${styles.card_face} ${styles.card_face_front}`}>
             <div className={styles.card_figure}>
               <div className={figure}></div>
-              {/* <Triangle /> */}
             </div>
           </div>
           <div className={`${styles.card_face} ${styles.card_face_back}`}>
