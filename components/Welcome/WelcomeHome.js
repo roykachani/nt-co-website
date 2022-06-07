@@ -9,11 +9,12 @@ import TextPrinter from '../TextPrinter';
 import lottieAnimation from '../../lottie/nt-co-final.json';
 
 import styles from './welcomeHome.module.css';
+import { useScrollText } from '../../hook/useScrollText';
 
 const WelcomeHome = ({ text }) => {
   const [showText, setShowText] = useState(true);
-  const { fontLoaded, windowSize } = useContext(MainContext);
-  const { width, height } = windowSize;
+  const { windowSize } = useContext(MainContext);
+  const { width } = windowSize;
 
   const responsive = {
     desktopA: 1680,
@@ -42,48 +43,43 @@ const WelcomeHome = ({ text }) => {
       ? 100
       : 0;
 
-  gsap.registerPlugin(ScrollTrigger);
+  const animArr = [
+    {
+      target: '#lottie',
+      animation: { scale: MaxScaleLottie, y: axisY, duration: 10 },
+    },
+    {
+      target: '#lottie',
+      animation: { opacity: 0.25, duration: 7 },
+      duration: '-=10',
+    },
+    {
+      target: '#text_container',
+      animation: { opacity: 1, duration: 0.2 },
+      duration: '-=7',
+    },
+  ];
 
-  const tl = useRef();
-  const addAnim = () => {
-    tl.current = gsap
-      .timeline({
-        scrollTrigger: {
-          id: 'tl1',
-          trigger: '#lottie_container',
-          pin: true,
-          start: 'top top',
-          end: '150% 45%',
-          scrub: true,
-          // markers: true,
-          onUpdate: function () {
-            //si el timeline esta en el 50% de la animacion
-            if (tl.current.progress() >= 0.4) {
-              setShowText(false);
-              //seteo el estado de la animacion a true
-              // setIsAnimation(true);
-            }
-          },
-        },
-      })
-      .to('#lottie', { scale: MaxScaleLottie, y: axisY, duration: 10 })
-      .to('#lottie', { opacity: 0.25, duration: 7 }, '-=10')
-      // .to('#text_scroll', { opacity: 0, duration: 1 }) mostrar scroll text?
-      .to('#text_container', { opacity: 1, duration: 0.2 }, '-=7');
-    ScrollTrigger.refresh(true);
-  };
-
-  const removeAnim = () => {
-    ScrollTrigger.getById('tl1').kill(true);
-    tl.current.kill();
-  };
-
-  useEffect(() => {
-    addAnim();
-    return () => {
-      removeAnim();
-    };
-  }, [width, height, fontLoaded]);
+  const [tl] = useScrollText(
+    'tl1',
+    '#lottie_container',
+    true,
+    'top top',
+    '150% 45%',
+    true,
+    false,
+    false,
+    true,
+    function () {
+      //si el timeline esta en el 50% de la animacion
+      if (tl.current.progress() >= 0.4) {
+        setShowText(false);
+        //seteo el estado de la animacion a true
+        // setIsAnimation(true);
+      }
+    },
+    animArr
+  );
 
   return (
     <div className={styles.main_container}>

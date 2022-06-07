@@ -1,55 +1,34 @@
-import { useState, useEffect, useRef, useContext } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useState, useEffect, useRef } from 'react';
 
-import { MainContext } from '../../context/mainContext';
 import TextPrinter from '../TextPrinter/TextPrinter';
 import CopiedLink from '../Icons/CopiedLink';
 
 import styles from './contact.module.css';
+import { useScrollText } from '../../hook/useScrollText';
 
 const Contact = ({ text, info }) => {
   const [showText, setShowText] = useState(true);
   const [copied, setCopied] = useState(false);
-  const { fontLoaded, windowSize } = useContext(MainContext);
-  const { width, height } = windowSize;
 
   const textRefA = useRef();
   const textRefB = useRef();
   const boxRefA = useRef();
   const boxRefB = useRef();
 
-  gsap.registerPlugin(ScrollTrigger);
-
-  const tl = useRef();
-  const addAnim = () => {
-    tl.current = gsap.timeline({
-      scrollTrigger: {
-        id: 'tl3',
-        trigger: '#contact',
-        // start: 'top 75%',
-        // end: 'bottom bottom',
-        scrub: true,
-        // markers: true,
-        onEnter: function () {
-          setShowText(false);
-        },
-      },
-    });
-
-    ScrollTrigger.refresh(true);
-  };
-  const removeAnim = () => {
-    ScrollTrigger.getById('tl3').kill(true);
-    tl.current.kill();
-  };
-
-  useEffect(() => {
-    addAnim();
-    return () => {
-      removeAnim();
-    };
-  }, [width, height, fontLoaded]);
+  useScrollText(
+    'tl3',
+    '#contact',
+    false,
+    '',
+    '',
+    true,
+    false,
+    true,
+    false,
+    function () {
+      setShowText(false);
+    }
+  );
 
   // copy to clipboard
   // usar componente TEXTPRINT para imprimir texto clipboard
@@ -69,17 +48,11 @@ const Contact = ({ text, info }) => {
     return setCopied(true);
   };
 
-  // const hideCopiedText =
-  //   copied === false
-  //     ? styles.notCopiedLink
-  //     : `${styles.notCopiedLink} ${styles.copiedLink}`;
-  // const hideIconCopi = copied === false ? styles.iconCopy : styles.copiedLink;
-
   useEffect(() => {
-    console.log(copied, 'copied');
+    // console.log(copied, 'copied');
     if (!!copied) {
       setTimeout(() => {
-        console.log(copied, 'time out');
+        // console.log(copied, 'time out');
         textRefA.current.classList.remove(styles.copiedLink);
         textRefB.current.classList.remove(styles.copiedLink);
         boxRefA.current.classList.remove(styles.copiedLink);

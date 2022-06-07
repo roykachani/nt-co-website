@@ -1,8 +1,6 @@
-import { useState, useEffect, useRef, useContext } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useState } from 'react';
 
-import { MainContext } from '../../context/mainContext';
+import { useScrollText } from '../../hook/useScrollText';
 import TextPrinter from '../TextPrinter/TextPrinter';
 import Card from '../Card';
 
@@ -10,40 +8,21 @@ import styles from './SkillSet.module.css';
 
 const SkillSet = ({ skills, texts }) => {
   const [showText, setShowText] = useState(true);
-  const { fontLoaded, windowSize } = useContext(MainContext);
-  const { width, height } = windowSize;
 
-  gsap.registerPlugin(ScrollTrigger);
-
-  const tl = useRef();
-  const addAnim = () => {
-    tl.current = gsap.timeline({
-      scrollTrigger: {
-        id: 'tl2',
-        trigger: '#skills',
-        // start: 'top 75%',
-        // end: 'bottom bottom',
-        scrub: true,
-        // markers: true,
-        onEnter: function () {
-          setShowText(false);
-        },
-      },
-    });
-
-    ScrollTrigger.refresh(true);
-  };
-  const removeAnim = () => {
-    ScrollTrigger.getById('tl2').kill(true);
-    tl.current.kill();
-  };
-
-  useEffect(() => {
-    addAnim();
-    return () => {
-      removeAnim();
-    };
-  }, [width, height, fontLoaded]);
+  useScrollText(
+    'tl2',
+    '#skills',
+    false,
+    '',
+    '',
+    true,
+    false,
+    true,
+    false,
+    function () {
+      setShowText(false);
+    }
+  );
 
   return (
     <>
