@@ -14,6 +14,11 @@ const Contact = ({ text, info }) => {
   const { fontLoaded, windowSize } = useContext(MainContext);
   const { width, height } = windowSize;
 
+  const textRefA = useRef();
+  const textRefB = useRef();
+  const boxRefA = useRef();
+  const boxRefB = useRef();
+
   gsap.registerPlugin(ScrollTrigger);
 
   const tl = useRef();
@@ -46,25 +51,43 @@ const Contact = ({ text, info }) => {
     };
   }, [width, height, fontLoaded]);
 
+  // copy to clipboard
+  // usar componente TEXTPRINT para imprimir texto clipboard
+
   const showClipText = (e) => {
     let clipText = e.target.id;
     let type = clipText.split('-')[1];
-    document.getElementById(`copied-${type}`).innerHTML = 'Copied to clipboard';
-    setCopied(true);
+    if (type === 'A') {
+      textRefA.current.innerHTML = 'Copied to clipboard';
+      textRefA.current.classList.add(styles.copiedLink);
+      boxRefA.current.classList.add(styles.copiedLink);
+    } else {
+      textRefB.current.innerHTML = 'Copied to clipboard';
+      textRefB.current.classList.add(styles.copiedLink);
+      boxRefB.current.classList.add(styles.copiedLink);
+    }
+    return setCopied(true);
   };
 
-  const hideCopiedText =
-    copied === false
-      ? styles.notCopiedLink
-      : `${styles.notCopiedLink} ${styles.copiedLink}`;
-  const hideIconCopi = copied === false ? styles.iconCopy : styles.copiedLink;
+  // const hideCopiedText =
+  //   copied === false
+  //     ? styles.notCopiedLink
+  //     : `${styles.notCopiedLink} ${styles.copiedLink}`;
+  // const hideIconCopi = copied === false ? styles.iconCopy : styles.copiedLink;
 
   useEffect(() => {
-    if (copied) {
+    console.log(copied, 'copied');
+    if (!!copied) {
       setTimeout(() => {
+        console.log(copied, 'time out');
+        textRefA.current.classList.remove(styles.copiedLink);
+        textRefB.current.classList.remove(styles.copiedLink);
+        boxRefA.current.classList.remove(styles.copiedLink);
+        boxRefB.current.classList.remove(styles.copiedLink);
         setCopied(false);
       }, 2000);
     }
+    return clearTimeout();
   }, [copied]);
 
   return (
@@ -85,9 +108,14 @@ const Contact = ({ text, info }) => {
               </div>
               <div className={styles.contact_email}>
                 <h4 className={styles.email}>
-                  <a href={`#mailto:${info}`}>{info}</a>
+                  <a
+                  // href={`mailto:${info}`}
+                  >
+                    {info}
+                  </a>
                   <div
-                    className={hideIconCopi}
+                    className={styles.iconCopy} //styles padre
+                    ref={boxRefA}
                     id="copy-A"
                     onClick={(e) => {
                       navigator.clipboard.writeText(info);
@@ -95,9 +123,9 @@ const Contact = ({ text, info }) => {
                     }}
                   >
                     <span
-                      id="copied-A"
+                      ref={textRefA}
                       hidden={!copied}
-                      className={hideCopiedText}
+                      className={styles.notCopiedLink} //styles hijo text
                     ></span>
                     <CopiedLink />
                   </div>
@@ -112,19 +140,24 @@ const Contact = ({ text, info }) => {
               </div>
               <div className={styles.contact_email}>
                 <h4 className={styles.email}>
-                  <a href={`#mailto:${info}`}>{info}</a>
+                  <a
+                  // href={`mailto:${info}`}
+                  >
+                    {info}
+                  </a>
                   <div
-                    className={hideIconCopi}
+                    className={styles.iconCopy} //styles padre
                     id="copy-B"
+                    ref={boxRefB}
                     onClick={(e) => {
                       navigator.clipboard.writeText(info);
                       showClipText(e);
                     }}
                   >
                     <span
-                      id="copied-B"
+                      ref={textRefB}
                       hidden={!copied}
-                      className={hideCopiedText}
+                      className={styles.notCopiedLink} //styles hijo text
                     ></span>
                     <CopiedLink />
                   </div>
