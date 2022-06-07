@@ -1,29 +1,29 @@
-export const usePrintText = (string, on, id) => {
-	console.log(string);
+export const usePrintText = (string, on, ref) => {
+  // console.log(string);
 
-	let arrayOfStrg = string.split('');
+  let arrayOfStrg = string.split('');
 
-	console.log(arrayOfStrg);
+  // console.log(arrayOfStrg);
 
-	let i = 0;
+  let i = 0;
 
-	let printStr = () => {
-		if (arrayOfStrg[i] === ' ') {
-			document.getElementById(id).innerHTML += arrayOfStrg[i];
-			document.getElementById(id).innerHTML += arrayOfStrg[i + 1];
-			i += 2;
-		} else if (arrayOfStrg[i]) {
-			document.getElementById(id).innerHTML += arrayOfStrg[i];
-			i++;
-		}
+  let printStr = () => {
+    if (arrayOfStrg[i] === ' ') {
+      ref.current.innerHTML += arrayOfStrg[i];
+      ref.current.innerHTML += arrayOfStrg[i + 1];
+      i += 2;
+    } else if (arrayOfStrg[i]) {
+      ref.current.innerHTML += arrayOfStrg[i];
+      i++;
+    }
 
-		if (i === arrayOfStrg.length) {
-			clearTimeout(printStr);
-		}
-		const speed = Math.random() * (300 - 270) + 100;
-		setTimeout(printStr, speed);
-	};
-	printStr();
+    if (i === arrayOfStrg.length) {
+      clearTimeout(printStr);
+    }
+    const speed = Math.random() * (300 - 270) + 100;
+    setTimeout(printStr, speed);
+  };
+  printStr();
 
-	return [printStr];
+  return [printStr];
 };
