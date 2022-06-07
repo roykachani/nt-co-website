@@ -100,6 +100,7 @@
 .notCopiedLink {
   text-align: center;
   opacity: 0;
+  font-size: 16px;
   letter-spacing: 0.8px;
   user-select: none;
   background: linear-gradient(
@@ -204,8 +205,5 @@
 
   .iconCopy {
     opacity: 1;
-  }
-  .notCopiedLink {
-    font-size: 16px;
   }
 }
