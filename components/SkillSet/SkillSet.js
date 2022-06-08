@@ -32,14 +32,14 @@ const SkillSet = ({ skills, texts }) => {
             <h2 className={styles.skill_subTitle} id="skills">
               <TextPrinter
                 showText={showText}
-                text={texts.title}
+                text={texts?.title}
                 id="our_skills"
               />
             </h2>
           </div>
           <div className={styles.our_box_description} id="our_box_description">
             <span className={styles.our_description} id="our_description">
-              {texts.description}
+              {texts?.description}
             </span>
           </div>
           <div className={styles.skill_cards_container}>

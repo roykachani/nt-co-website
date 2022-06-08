@@ -1,9 +1,12 @@
-import { useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef } from 'react';
+import { MainContext } from '../../context/mainContext';
 import { usePrintText } from '../../hook/usePrintText';
 import styles from './textPrinter.module.css';
 
 const TextPrinter = ({ showText, text, id }) => {
   const spanRef = useRef();
+  const { mainState } = useContext(MainContext);
+
   const handlePrint = () => usePrintText(text, showText, spanRef);
 
   const textStyle = id === 'our_skills' ? styles.skill_text_title : styles.text;
@@ -14,7 +17,7 @@ const TextPrinter = ({ showText, text, id }) => {
 
   useEffect(() => {
     // console.log(showText, 'efecto');
-    if (!showText) {
+    if (!showText && mainState.texts?.skills) {
       const print = handlePrint();
       // console.log(print);
     }
