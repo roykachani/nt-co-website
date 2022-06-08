@@ -1,15 +1,13 @@
-import { useState, useEffect, useRef, useContext } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useState, useContext } from 'react';
 import Lottie from 'react-lottie-player';
 
 import { MainContext } from '../../context/mainContext';
+import { useScrollText } from '../../hook/useScrollText';
 import Nav from '../Nav';
 import TextPrinter from '../TextPrinter';
 import lottieAnimation from '../../lottie/nt-co-final.json';
 
 import styles from './welcomeHome.module.css';
-import { useScrollText } from '../../hook/useScrollText';
 
 const WelcomeHome = ({ text }) => {
   const [showText, setShowText] = useState(true);
