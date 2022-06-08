@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useRef } from 'react';
 import Lottie from 'react-lottie-player';
 
 import { MainContext } from '../../context/mainContext';
@@ -13,6 +13,7 @@ const WelcomeHome = ({ text }) => {
   const [showText, setShowText] = useState(true);
   const { windowSize } = useContext(MainContext);
   const { width } = windowSize;
+  const textRef = useRef();
 
   const responsive = {
     desktopA: 1680,
@@ -52,9 +53,9 @@ const WelcomeHome = ({ text }) => {
       duration: '-=10',
     },
     {
-      target: '#text_container',
-      animation: { opacity: 1, duration: 0.2 },
-      duration: '-=7',
+      target: '#text_scroll',
+      animation: { opacity: 0, duration: 0.5 },
+      duration: '-=0.5',
     },
   ];
 
@@ -70,8 +71,10 @@ const WelcomeHome = ({ text }) => {
     true,
     function () {
       //si el timeline esta en el 50% de la animacion
-      if (tl.current.progress() >= 0.4) {
-        setShowText(false);
+      if (tl.current.progress() >= 0.15) {
+        //0.4
+        textRef.current.classList.add(styles.text_is_visible);
+        return setShowText(false);
         //seteo el estado de la animacion a true
         // setIsAnimation(true);
       }
@@ -92,7 +95,11 @@ const WelcomeHome = ({ text }) => {
           rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
           className={styles.lottie}
         />
-        <div className={styles.text_container} id="text_container">
+        <div
+          className={styles.text_container}
+          id="text_container"
+          ref={textRef}
+        >
           <TextPrinter showText={showText} text={text} id="text" />
         </div>
         <div className={styles.text_scroll} id="text_scroll">
