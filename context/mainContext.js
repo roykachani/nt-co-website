@@ -7,37 +7,41 @@ export const MainContext = createContext();
 const { Provider } = MainContext;
 
 export const MainProvider = ({ children }) => {
-	const [mainState, setMainState] = useState({});
-	const [fontLoaded, setFontLoaded] = useState(false);
-	const [windowSize, setWindowSize] = useState({
-		width: undefined,
-		height: undefined,
-	});
+  const [mainState, setMainState] = useState({});
+  const [fontLoaded, setFontLoaded] = useState(false);
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
 
-	useEffect(() => {
-		//check si la fuente esta cargada
-		document.fonts.ready.then(setFontLoaded(true));
+  const dataAPI = (data) => {
+    setMainState(data);
+  };
 
-		//recalcula window size
-		const handleResize = () => {
-			setWindowSize({
-				width: window.innerWidth,
-				height: window.innerHeight,
-			});
-		};
-		handleResize();
+  useEffect(() => {
+    //check si la fuente esta cargada
+    document.fonts.ready.then(setFontLoaded(true));
 
-		//controlo la cantidad de veces que el "user" hace resize para que no se repita el handleResize continuamente
-		const debouncedHandleResize = debounce(handleResize, 200);
+    //recalcula window size
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+    handleResize();
 
-		window.addEventListener('resize', debouncedHandleResize);
+    //controlo la cantidad de veces que el "user" hace resize para que no se repita el handleResize continuamente
+    const debouncedHandleResize = debounce(handleResize, 200);
 
-		return () => window.removeEventListener('resize', debouncedHandleResize);
-	}, []);
+    window.addEventListener('resize', debouncedHandleResize);
 
-	return (
-		<Provider value={{ mainState, fontLoaded, windowSize }}>
-			{children}
-		</Provider>
-	);
+    return () => window.removeEventListener('resize', debouncedHandleResize);
+  }, []);
+
+  return (
+    <Provider value={{ mainState, fontLoaded, windowSize, dataAPI }}>
+      {children}
+    </Provider>
+  );
 };
