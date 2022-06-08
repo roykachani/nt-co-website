@@ -1,15 +1,23 @@
+import { useContext, useEffect } from 'react';
 import Head from 'next/head';
 
+import { MainContext } from '../context/mainContext';
 import WelcomeHome from '../components/Welcome';
 import SkillSet from '../components/SkillSet';
+import Marquee from '../components/Marquee';
+import Contact from '../components/Contact';
+import api from '../utils/api';
 
 import styles from '../styles/Home.module.css';
-import api from '../utils/api';
-import Marquee from '../components/Marquee';
-import Contact from '../components/Contact/Contact';
 
 export default function Home({ data }) {
-  const { info, texts, skills } = data;
+  const { info, texts } = data;
+  const { dataAPI } = useContext(MainContext);
+
+  useEffect(() => {
+    dataAPI(data);
+  }, []);
+
   return (
     <>
       <Head>
@@ -20,11 +28,11 @@ export default function Home({ data }) {
 
       <main>
         <WelcomeHome text={texts.about} />
-        <SkillSet skills={skills} texts={texts.skills} />
+        <SkillSet />
         <Marquee />
       </main>
       <footer>
-        <Contact text={texts.contact} info={info.email} />
+        <Contact />
       </footer>
     </>
   );
