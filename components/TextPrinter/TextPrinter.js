@@ -3,11 +3,11 @@ import { MainContext } from '../../context/mainContext';
 import { usePrintText } from '../../hook/usePrintText';
 import styles from './textPrinter.module.css';
 
-const TextPrinter = ({ showText, text, id }) => {
+const TextPrinter = ({ showText, text, id, ms }) => {
   const spanRef = useRef();
   const { mainState } = useContext(MainContext);
 
-  const handlePrint = () => usePrintText(text, showText, spanRef);
+  const handlePrint = () => usePrintText(text, showText, spanRef, ms);
 
   const textStyle = id === 'our_skills' ? styles.skill_text_title : styles.text;
   const underscoreStyle =
