@@ -100,7 +100,7 @@ const WelcomeHome = ({ text }) => {
           id="text_container"
           ref={textRef}
         >
-          <TextPrinter showText={showText} text={text} id="text" />
+          <TextPrinter showText={showText} text={text} id="text" ms={350} />
         </div>
         <div className={styles.text_scroll} id="text_scroll">
           <span>scroll down to start playing</span>
