@@ -1,4 +1,4 @@
-export const usePrintText = (string, on, ref) => {
+export const usePrintText = (string, on, ref, ms = 270) => {
   // console.log(string);
 
   let arrayOfStrg = string.split('');
@@ -20,7 +20,7 @@ export const usePrintText = (string, on, ref) => {
     if (i === arrayOfStrg.length) {
       clearTimeout(printStr);
     }
-    const speed = Math.random() * (300 - 270) + 100;
+    const speed = Math.random() * (300 - ms) + 100;
     setTimeout(printStr, speed);
   };
   printStr();
