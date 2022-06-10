@@ -1,7 +1,7 @@
 .main_container {
   position: relative;
   width: 100%;
-  min-height: 2000px;
+  min-height: 2100px;
   overflow: hidden;
   z-index: 1;
 }
@@ -13,6 +13,19 @@
   height: auto;
   opacity: 0;
   top: 260px;
+  transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+}
+.text_is_visible {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
 }
 
 .lottie_container {
@@ -45,7 +58,7 @@
 
 @media screen and (max-width: 1680px) {
   .main_container {
-    min-height: 1950px;
+    min-height: 2050px;
   }
   .text_container {
     left: 175px;
@@ -65,7 +78,7 @@
 }
 @media screen and (max-width: 1440px) {
   .main_container {
-    min-height: 1800px;
+    min-height: 1750px;
   }
   .text_container {
     left: 175px;
@@ -85,7 +98,7 @@
 }
 @media screen and (max-width: 1200px) {
   .main_container {
-    min-height: 1700px;
+    min-height: 1650px;
   }
   .text_container {
     left: 120px;
@@ -105,6 +118,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .main_container {
+    min-height: 2000px;
+  }
   .text_container {
     left: 0;
     width: 72%;

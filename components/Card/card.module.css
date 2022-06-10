@@ -55,34 +55,13 @@
   -webkit-backface-visibility: hidden;
   overflow: hidden;
   border-radius: 26px;
-  /* box-shadow: 0 3px 18px 3px rgba(255, 255, 255, 0.16); */
 }
 .card_face_front {
-  /* background-image: linear-gradient(
-		256deg,
-		#e8979f 0%,
-		#c293b3 15%,
-		#9b8fc9 33%,
-		#7c8cda 51%,
-		#6589e7 68%,
-		#5888ee 85%,
-		#5488f1 100%
-	); */
   background: #18181a;
 }
 
 .card_face_back {
   background: #18181a;
-  /* background-image: linear-gradient(
-		256deg,
-		#e8979f 0%,
-		#c293b3 15%,
-		#9b8fc9 33%,
-		#7c8cda 51%,
-		#6589e7 68%,
-		#5888ee 85%,
-		#5488f1 100%
-	); */
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180de);
   -moz-transform: rotateY(180de);
@@ -90,15 +69,16 @@
   -o-transform: rotateY(180de);
 }
 .card_content {
-  width: 40%;
-  height: 60%;
+  width: 80%;
+  height: 70%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .content_description {
+  margin: 20px 0;
   color: #d9e1ff;
   font-size: 24px;
   font-weight: 400;

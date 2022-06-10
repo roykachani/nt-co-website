@@ -12,7 +12,7 @@ const CopiedLink = (props) => (
     <path fill="none" d="M0 0h24v24H0z" />
     <path
       fill="none"
-      stroke="#8da0ef"
+      stroke="#e8979f"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}

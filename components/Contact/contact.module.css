@@ -16,11 +16,6 @@
 }
 
 .contact_box_left {
-  margin-right: 143px;
-  display: flex;
-  align-items: center;
-}
-.contact_box_right {
   display: flex;
   align-items: center;
 }
@@ -49,31 +44,14 @@
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-.contact_figure_diamond {
-  margin-right: 56px;
-  width: 72.92px;
-  height: 72.92px;
-  border: 1px solid #8da0ef;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-}
-.contact_figure_diamond_inner {
-  width: 39.49px;
-  height: 39.49px;
-  border: 1px solid #8da0ef;
-}
+
 .email {
   margin: 0;
   font-size: 32px;
   user-select: none;
   display: block;
   position: relative;
+  cursor: default;
 }
 .iconCopy {
   position: absolute;
@@ -103,6 +81,7 @@
   font-size: 16px;
   letter-spacing: 0.8px;
   user-select: none;
+  cursor: default;
   background: linear-gradient(
     256deg,
     #e8979f 0%,
