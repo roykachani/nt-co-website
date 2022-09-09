@@ -61,6 +61,7 @@
 }
 
 .card_face_back {
+  border: 1px solid #d9e1ff;
   background: #18181a;
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180de);
@@ -91,119 +92,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/*figure*/
-.circle {
-  width: 100px;
-  height: 100px;
-  border: 1px solid #8da0ef;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-}
-
-.diamond {
-  width: 100px;
-  height: 100px;
-  border: 1px solid #8da0ef;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-.triangle {
-  width: 0;
-  height: 0;
-  background: transparent;
-  border: 1px solid #8da0ef;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-bottom: 200px solid #8da0ef;
-  /* El color de la figura lo determina el color de este borde*/
-}
-
-.hexagon {
-  width: 200px;
-  height: 105px;
-  background: #8da0ef;
-  position: relative;
-}
-.hexagon::before {
-  content: '';
-  position: absolute;
-  top: -50px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-bottom: 50px solid #8da0ef;
-}
-.hexagon:after {
-  content: '';
-  position: absolute;
-  bottom: -50px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-top: 50px solid #8da0ef;
-}
-
-.star {
-  margin: 150px auto;
-  position: relative;
-  display: block;
-  color: #8da0ef;
-  background: transparent;
-  width: 0px;
-  height: 0px;
-  border-right: 100px solid transparent;
-  border-bottom: 70px solid #8da0ef;
-  border-left: 100px solid transparent;
-  transform: rotate(35deg);
-  -moz-transform: rotate(35deg);
-  -webkit-transform: rotate(35deg);
-  -ms-transform: rotate(35deg);
-  -o-transform: rotate(35deg);
-}
-.star::before {
-  border-bottom: 80px solid #8da0ef;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
-  position: absolute;
-  height: 0;
-  width: 0;
-  top: -45px;
-  left: -65px;
-  display: block;
-  content: '';
-  transform: rotate(-35deg);
-  -webkit-transform: rotate(-35deg);
-  -moz-transform: rotate(-35deg);
-  -ms-transform: rotate(-35deg);
-  -o-transform: rotate(-35deg);
-}
-.star::after {
-  position: absolute;
-  display: block;
-  color: red;
-  top: 3px;
-  left: -105px;
-  width: 0px;
-  height: 0px;
-  border-right: 100px solid transparent;
-  border-bottom: 70px solid #8da0ef;
-  border-left: 100px solid transparent;
-  transform: rotate(-70deg);
-  -webkit-transform: rotate(-70deg);
-  -moz-transform: rotate(-70deg);
-  -ms-transform: rotate(-70deg);
-  -o-transform: rotate(-70deg);
-  content: '';
 }
 
 /* media queries */
