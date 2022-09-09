@@ -25,7 +25,7 @@
         "Brand Strategy / Planning",
         "Research"
       ],
-      "symbol": "circle"
+      "svgPath": "/svg-cards/01-Strategy.svg"
     },
     {
       "id": "2",
@@ -35,25 +35,25 @@
         "Events & Tournaments",
         "Live Streams"
       ],
-      "symbol": "diamond"
+      "svgPath": "/svg-cards/02-Gaming.svg"
     },
     {
       "id": "3",
       "name": "design",
       "description": ["Branding", "UX / UI", "Motion"],
-      "symbol": "hexagon"
+      "svgPath": "/svg-cards/03-Design.svg"
     },
     {
       "id": "4",
       "name": "Product Development",
       "description": ["Web Dev", "App Development"],
-      "symbol": "triangle"
+      "svgPath": "/svg-cards/04-Development.svg"
     },
     {
       "id": "5",
       "name": "content",
       "description": ["Content Production", "Live Streams", "Audiovisual"],
-      "symbol": "star"
+      "svgPath": "/svg-cards/05-Marketing.svg"
     }
   ]
 }
