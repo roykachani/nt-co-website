@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { MainContext } from '../context/mainContext';
 import WelcomeHome from '../components/Welcome';
 import SkillSet from '../components/SkillSet';
-import Marquee from '../components/Marquee';
+// import Marquee from '../components/Marquee';
 import Contact from '../components/Contact';
 import api from '../utils/api';
 
@@ -27,7 +27,7 @@ export default function Home({ data }) {
       <main>
         <WelcomeHome text={texts.about} />
         <SkillSet />
-        <Marquee />
+        {/* <Marquee /> hasta nuevo aviso */}
       </main>
       <footer>
         <Contact />
