@@ -8,8 +8,6 @@ import Marquee from '../components/Marquee';
 import Contact from '../components/Contact';
 import api from '../utils/api';
 
-import styles from '../styles/Home.module.css';
-
 export default function Home({ data }) {
   const { info, texts } = data;
   const { dataAPI } = useContext(MainContext);
