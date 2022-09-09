@@ -1,25 +1,15 @@
+import Image from 'next/image';
 import { useRef } from 'react';
 
 import styles from './card.module.css';
 
 const Card = ({ skill }) => {
-  const { name, description, symbol } = skill;
+  const { name, description, svgPath } = skill;
   const cardRef = useRef();
 
   const addClass = () => {
     cardRef.current.classList.toggle(styles.is_flipped);
   };
-
-  const figure =
-    symbol === 'circle'
-      ? styles.circle
-      : symbol === 'diamond'
-      ? styles.diamond
-      : symbol === 'triangle'
-      ? styles.triangle
-      : symbol === 'hexagon'
-      ? styles.hexagon
-      : styles.star;
 
   return (
     <>
@@ -32,7 +22,9 @@ const Card = ({ skill }) => {
         >
           <div className={`${styles.card_face} ${styles.card_face_front}`}>
             <div className={styles.card_figure}>
-              <div className={figure}></div>
+              <div>
+                <Image src={svgPath} width={243} height={320}></Image>
+              </div>
             </div>
           </div>
           <div className={`${styles.card_face} ${styles.card_face_back}`}>
