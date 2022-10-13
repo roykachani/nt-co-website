@@ -27,10 +27,10 @@
   -webkit-transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
-  border-radius: 26px;
+  border-radius: 8px;
 }
 .card_inner:hover {
-  border-radius: 26px;
+  border-radius: 8px;
   box-shadow: 0px 3px 18px 3px rgba(133, 133, 133, 0.2);
 }
 .is_flipped {
@@ -42,8 +42,8 @@
 }
 
 .card_face {
-  border: 1px solid #d9e1ff;
-  border-radius: 26px;
+  /* border: 1px solid #d9e1ff; */
+  border-radius: 8px;
   margin-bottom: 67px;
   position: absolute;
   width: 100%;
@@ -54,20 +54,28 @@
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   overflow: hidden;
-  border-radius: 26px;
 }
 .card_face_front {
   background: #18181a;
 }
 
 .card_face_back {
-  border: 1px solid #d9e1ff;
+  /* border: 1px solid #d9e1ff; */
   background: #18181a;
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180de);
   -moz-transform: rotateY(180de);
   -ms-transform: rotateY(180de);
   -o-transform: rotateY(180de);
+  position: relative;
+}
+.card_content_blur {
+  width: 92%;
+  height: 94%;
+  backdrop-filter: blur(8px); /*12 40*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .card_content {
   width: 80%;
@@ -94,18 +102,21 @@
   justify-content: center;
 }
 
+.back_figure_opacity {
+  position: absolute;
+}
+
 /* media queries */
 @media screen and (max-width: 1440px) {
   .card {
-    /* margin-right: 35px; */
-    width: 180px;
+    width: 200px;
     height: 487px;
     perspective: 500px;
     margin-bottom: 50px;
   }
   .card_inner {
     width: 100%;
-    height: 320px;
+    height: 295px;
   }
 
   .content_description {
@@ -125,7 +136,7 @@
   }
   .card_inner {
     width: 100%;
-    height: 320px;
+    height: 295px;
   }
 
   .content_description {
@@ -138,15 +149,16 @@
 
 @media screen and (max-width: 540px) {
   .card {
-    /* margin-right: 35px; */
     width: 200px;
     height: 457px;
     perspective: 500px;
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column-reverse;
   }
   .card_inner {
     width: 100%;
-    height: 320px;
+    height: 295px;
   }
 
   .content_description {
@@ -155,6 +167,7 @@
   .card_name {
     text-align: center;
     margin-top: 40px;
+    margin-bottom: 25px;
   }
   .card_name_text {
     font-size: 20px;
