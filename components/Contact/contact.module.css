@@ -112,7 +112,15 @@
 }
 
 /* responsive */
+@media screen and (max-width: 1440px) {
+  .main_container {
+    margin: 0;
+  }
+}
 @media screen and (max-width: 1024px) {
+  .main_container {
+    margin: 79px 0;
+  }
   .contact_container {
     margin: 0 120px;
   }
