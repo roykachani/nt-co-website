@@ -19,7 +19,7 @@ export default function Home({ data }) {
   return (
     <>
       <Head>
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <title>NT Co. | digital agency</title>
         <meta name="description" content={info.description} />
         <link rel="icon" href="/favicon.ico" />
