@@ -5,7 +5,9 @@
     "commerce": "digital agency",
     "description": "We are an end-to-end agency that innovates to find new trends and develop game-breaking metas.",
     "website": "www.nice-try.co",
-    "email": "contact@ntcompany.co"
+    "email": "contact@ntcompany.co",
+    "copyright": "Nice Try co.",
+    "author": "Roy Kachani"
   },
   "texts": {
     "about": "We are an end-to-end agency that innovates to find new trends and develop game-breaking metas",
