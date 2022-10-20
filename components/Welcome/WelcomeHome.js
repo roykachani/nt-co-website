@@ -70,13 +70,10 @@ const WelcomeHome = ({ text }) => {
     false,
     true,
     function () {
-      //si el timeline esta en el 50% de la animacion
-      if (tl.current.progress() >= 0.15) {
-        //0.4
+      //si el timeline esta en x progreso de la animacion
+      if (tl.current.progress() >= 0.07) {
         textRef.current.classList.add(styles.text_is_visible);
         return setShowText(false);
-        //seteo el estado de la animacion a true
-        // setIsAnimation(true);
       }
     },
     animArr
