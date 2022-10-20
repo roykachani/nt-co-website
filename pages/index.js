@@ -27,7 +27,7 @@ export default function Home({ data }) {
           name="keywords"
           content="end-to-end agency, digital agency, nice try, nice try co., new trends and develop, help organizations level up their brands, Digital Marketing, strategy, Brand Strategy, Planning, Research, gaming, Team Management, Events, Tournaments, Events & Tournaments, Live Streams, design, Branding, Product Development, Motion,UX / UI, App Development, Content Production, Live Streams, Audiovisual"
         />
-        <link rel="canonical" href="https://nice-try.co/" />
+        <link rel="canonical" href="https://www.nice-try.co/" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
