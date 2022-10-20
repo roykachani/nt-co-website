@@ -44,11 +44,13 @@ export default function Home({ data }) {
         <meta property="og:locale" content="es_AR" />
         <meta property="og:locale:alternate" content="en_US" />
         <meta property="og:locale:alternate" content="es_ES" />
+        <meta property="og:image:type" content="image/png" />
 
         <meta name="twitter:card" content="summary_large_image" />
         {/* <meta name="twitter:site" value="@nicetryco" content="@nicetryco" /> */}
         <meta name="twitter:description" content={info.description} />
-
+        <meta property="og:image:width" content="300" />
+        <meta property="og:image:height" content="300" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
