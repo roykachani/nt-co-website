@@ -54,8 +54,30 @@
   -webkit-backface-visibility: hidden;
   overflow: hidden;
 }
+
 .card_face_front {
   background: #18181a;
+  transition: transform 1s;
+  -webkit-transition: transform 1s;
+  -moz-transition: transform 1s;
+  -ms-transition: transform 1s;
+  -o-transition: transform 1s;
+}
+.card_face_front:hover {
+  transform: scale(1.05);
+}
+@media (hover: none) {
+  .mobile_active {
+    background: #18181a;
+    transition: transform 1s;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+  }
+  .mobile_active:hover {
+    transform: scale(1.05);
+  }
 }
 
 .card_face_back {
