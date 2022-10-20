@@ -31,6 +31,44 @@ export default function Home({ data }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
+
+        <meta property="og:title" content="NT Co. | digital agency" />
+        <meta property="og:site_name" content="Nice Try Co." />
+        <meta property="og:url" content="https://www.nice-try.co/" />
+        <meta property="og:description" content={info.description} />
+        <meta
+          property="og:image"
+          content="https://www.nice-try.co/profile.png"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="es_AR" />
+        <meta property="og:locale:alternate" content="en_US" />
+        <meta property="og:locale:alternate" content="es_ES" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        {/* <meta name="twitter:site" value="@nicetryco" content="@nicetryco" /> */}
+        <meta name="twitter:description" content={info.description} />
+
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#191919" />
+        <meta name="msapplication-TileColor" content="#da6a7b" />
         <meta content="#18181a" name="theme-color" />
         <meta name="copyright" content={info.copyright} />
         <meta name="author" content={info.author} />
