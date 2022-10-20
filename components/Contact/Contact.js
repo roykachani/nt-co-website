@@ -1,19 +1,20 @@
 import { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
 
+import { useScrollText } from '../../hook/useScrollText';
 import TextPrinter from '../TextPrinter/TextPrinter';
+import InstaIcon from '../Icons/InstaIcon';
+import LinkedinIcon from '../Icons/LinkedinIcon';
 import CopiedLink from '../Icons/CopiedLink';
 
 import styles from './contact.module.css';
-import { useScrollText } from '../../hook/useScrollText';
 
 const Contact = ({ text, info }) => {
   const [showText, setShowText] = useState(true);
   const [copied, setCopied] = useState(false);
 
   const textRefA = useRef();
-  const textRefB = useRef();
   const boxRefA = useRef();
-  const boxRefB = useRef();
 
   useScrollText(
     'tl3',
@@ -95,6 +96,36 @@ const Contact = ({ text, info }) => {
                   </div>
                 </h4>
               </div>
+            </div>
+          </div>
+          <div className={styles.social_container}>
+            <div className={styles.social_box}>
+              <a
+                className={styles.social_link}
+                href="https://instagram.com/nt__co/"
+                target="_blank"
+              >
+                <InstaIcon />
+              </a>
+              <a
+                className={styles.social_link}
+                href="https://linkedin.com/company/nt-co/"
+                target="_blank"
+              >
+                <LinkedinIcon />
+              </a>
+            </div>
+          </div>
+          <div className={styles.dev_container}>
+            <div className={styles.dev_box}>
+              <span className={styles.dev_text}>Developed by </span>
+              <a
+                className={`${styles.dev_text} ${styles.dev_link}`}
+                href="https://roykachani.com/"
+                target="_blank"
+              >
+                Roy Kachani
+              </a>
             </div>
           </div>
         </div>

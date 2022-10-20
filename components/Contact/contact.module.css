@@ -1,12 +1,12 @@
 .main_container {
   width: 100%;
-  margin: 79px 0;
+  margin-top: 79px;
   display: flex;
   justify-content: center;
 }
 .contact_container {
   width: 100%;
-  margin: 140px 172px;
+  margin: 140px 172px 35px;
 }
 .contact_subTitle_box {
   margin-bottom: 109px;
@@ -18,6 +18,7 @@
 .contact_box_left {
   display: flex;
   align-items: center;
+  margin-bottom: 35px;
 }
 
 .contact_figure_circle {
@@ -111,15 +112,73 @@
   -o-transition: 0.8s ease-in-out all;
 }
 
+.dev_container {
+  display: flex;
+  height: 45px;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 75px;
+}
+.dev_box {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding-right: 100px;
+  gap: 5px;
+}
+.dev_text {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: rgba(75, 75, 75, 0.5);
+  letter-spacing: 0.8px;
+}
+
+/*social box*/
+.social_container {
+  display: flex;
+  height: 45px;
+  align-items: center;
+}
+.social_box {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding-left: 110px;
+  gap: 25px;
+}
+.social_link {
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+  color: currentColor;
+}
+@media (hover) {
+  .social_link:hover {
+    color: #c293b3;
+  }
+  .dev_link:hover {
+    color: hsla(228, 75%, 75%, 0.5);
+  }
+}
+
 /* responsive */
+@media screen and (max-width: 1680px) {
+  .dev_box {
+    padding-right: 0;
+  }
+}
 @media screen and (max-width: 1440px) {
   .main_container {
     margin: 0;
   }
+  .dev_box {
+    padding-right: 0;
+  }
 }
 @media screen and (max-width: 1024px) {
   .main_container {
-    margin: 79px 0;
+    margin: 20px 0;
   }
   .contact_container {
     margin: 0 120px;
@@ -192,5 +251,19 @@
 
   .iconCopy {
     opacity: 1;
+  }
+  .social_container {
+    justify-content: center;
+    width: 100%;
+  }
+  .social_box {
+    padding-left: 0;
+  }
+  .dev_container {
+    justify-content: center;
+    width: 100%;
+  }
+  .dev_box {
+    padding-right: 0;
   }
 }
