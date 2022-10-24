@@ -39,7 +39,7 @@ const Card = ({ skill }) => {
               className={`${styles.card_figure} ${styles.back_figure_opacity}`}
             >
               <Image
-                src={svgPath}
+                src="/svg-cards/simple1.svg"
                 width={243}
                 height={360}
                 alt={name}
