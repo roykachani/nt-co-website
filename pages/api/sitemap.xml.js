@@ -17,7 +17,7 @@ export default function handler(req, res) {
       
       <url>
         <loc>https://nice-try.co/</loc>
-        <lastmod>2022-10-14T19:42:59+00:00</lastmod>
+        <lastmod>2022-10-27T19:42:59+00:00</lastmod>
         <priority>1.00</priority>
       </url>
       
