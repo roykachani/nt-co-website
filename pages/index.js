@@ -25,7 +25,7 @@ export default function Home({ data }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="keywords"
-          content="end-to-end agency, digital agency, nice try, nice try co., new trends and develop, help organizations level up their brands, Digital Marketing, strategy, Brand Strategy, Planning, Research, gaming, Team Management, Events, Tournaments, Events & Tournaments, Live Streams, design, Branding, Product Development, Motion,UX / UI, App Development, Content Production, Live Streams, Audiovisual"
+          content="end-to-end agency, digital agency, nice try, nice try co., new trends and develop, help organizations level up their brands, Digital Marketing, strategy, Brand Strategy, Planning, Research, gaming, Team Management, Events, Tournaments, Events & Tournaments, Live Streams, design, Branding, Product Development, Motion,UX / UI, App Development, Content Production, Live Streams, Audiovisual, Productora audiovisual, creadores de contenido, diseñadores, agencia digital, streams streaming, estrategia digital, digital strategy, estrategia"
         />
         <link rel="canonical" href="https://www.nice-try.co/" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
