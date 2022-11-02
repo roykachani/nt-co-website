@@ -24,6 +24,12 @@ export default function Home({ data }) {
         <meta name="title" content="NT Co. | digital agency" />
         <meta name="description" content={info.description} />
         <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="96x96"
+          href="/favicon-96x96.png"
+        />
         <meta
           name="keywords"
           content="end-to-end agency, digital agency, nice try, nice try co., new trends and develop, help organizations level up their brands, Digital Marketing, strategy, Brand Strategy, Planning, Research, gaming, Team Management, Events, Tournaments, Events & Tournaments, Live Streams, design, Branding, Product Development, Motion,UX / UI, App Development, Content Production, Live Streams, Audiovisual, Productora audiovisual, creadores de contenido, diseñadores, agencia digital, streams streaming, estrategia digital, digital strategy, estrategia"
