@@ -20,6 +20,9 @@ const Card = ({ skill, width }) => {
       [0.5, 0.75, 1],
       styles.is_flipped
     );
+    const toggleClass = () => {
+      fromRef.current.classList.toggle(styles.is_flipped);
+    };
     return (
       <>
         <div className={styles.card}>
@@ -27,11 +30,10 @@ const Card = ({ skill, width }) => {
             className={styles.card_inner}
             id={skill.id}
             ref={fromRef}
-            onClick={addClass}
+            onClick={toggleClass}
           >
             <div className={`${styles.card_face} ${styles.card_face_front}`}>
               <div className={styles.card_figure}>
-                {/* <div> */}
                 <Image
                   src={svgPath}
                   width={243}
@@ -40,7 +42,6 @@ const Card = ({ skill, width }) => {
                   objectFit="cover"
                   loading="eager"
                 />
-                {/* </div> */}
               </div>
             </div>
             <div className={`${styles.card_face} ${styles.card_face_back}`}>
@@ -88,7 +89,6 @@ const Card = ({ skill, width }) => {
         >
           <div className={`${styles.card_face} ${styles.card_face_front}`}>
             <div className={styles.card_figure}>
-              {/* <div> */}
               <Image
                 src={svgPath}
                 width={243}
@@ -97,7 +97,6 @@ const Card = ({ skill, width }) => {
                 objectFit="cover"
                 loading="eager"
               />
-              {/* </div> */}
             </div>
           </div>
           <div className={`${styles.card_face} ${styles.card_face_back}`}>
