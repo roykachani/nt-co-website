@@ -6,7 +6,7 @@ import Card from '../Card';
 
 import styles from './SkillSet.module.css';
 
-const SkillSet = ({ skills, texts }) => {
+const SkillSet = ({ skills, texts, width }) => {
   const [showText, setShowText] = useState(true);
 
   useScrollText(
@@ -45,7 +45,7 @@ const SkillSet = ({ skills, texts }) => {
           <div className={styles.skill_cards_container}>
             <div className={styles.wrapper_cards}>
               {skills.map((skill, index) => (
-                <Card key={index} skill={skill} />
+                <Card key={index} skill={skill} width={width} />
               ))}
             </div>
           </div>

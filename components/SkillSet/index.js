@@ -6,13 +6,17 @@ const SkillSet = lazy(() => import('./SkillSet'));
 
 export default function LazySkillSet() {
   const { isNearScreen, fromRef } = useNearScreen('800px');
-  const { mainState } = useContext(MainContext);
+  const { mainState, windowSize } = useContext(MainContext);
 
   return (
     <div ref={fromRef}>
       <Suspense fallback={null}>
         {isNearScreen ? (
-          <SkillSet skills={mainState.skills} texts={mainState.texts.skills} />
+          <SkillSet
+            skills={mainState.skills}
+            texts={mainState.texts.skills}
+            width={windowSize.width < 540 ? true : false}
+          />
         ) : null}
       </Suspense>
     </div>
