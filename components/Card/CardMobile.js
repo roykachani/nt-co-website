@@ -1,24 +1,29 @@
 import Image from 'next/image';
-import { useRef } from 'react';
+import { useNearScreen } from '../../hook/useNearScreen';
 
 import styles from './card.module.css';
 
-const Card = ({ skill }) => {
-  const cardRef = useRef();
+const CardMobile = ({ skill }) => {
   const { name, description, svgPath } = skill;
 
-  const addClass = () => {
-    cardRef.current.classList.toggle(styles.is_flipped);
-  };
+  /* mobile  version*/
 
+  const { fromRef } = useNearScreen(
+    '-130px',
+    [0.5, 0.75, 1],
+    styles.is_flipped
+  );
+  const toggleClass = () => {
+    fromRef.current.classList.toggle(styles.is_flipped);
+  };
   return (
     <>
       <div className={styles.card}>
         <div
           className={styles.card_inner}
           id={skill.id}
-          ref={cardRef}
-          onClick={addClass}
+          ref={fromRef}
+          onClick={toggleClass}
         >
           <div className={`${styles.card_face} ${styles.card_face_front}`}>
             <div className={styles.card_figure}>
@@ -65,5 +70,4 @@ const Card = ({ skill }) => {
     </>
   );
 };
-
-export default Card;
+export default CardMobile;
