@@ -104,6 +104,7 @@ const Contact = ({ text, info }) => {
                 className={styles.social_link}
                 href="https://instagram.com/nt__co/"
                 target="_blank"
+                aria-label="more in our instagram.com/nt__co/"
               >
                 <InstaIcon />
               </a>
@@ -111,6 +112,7 @@ const Contact = ({ text, info }) => {
                 className={styles.social_link}
                 href="https://linkedin.com/company/nt-co/"
                 target="_blank"
+                aria-label="more in our linkedin"
               >
                 <LinkedinIcon />
               </a>
@@ -123,6 +125,7 @@ const Contact = ({ text, info }) => {
                 className={`${styles.dev_text} ${styles.dev_link}`}
                 href="https://roykachani.com/"
                 target="_blank"
+                aria-label="Developed by"
               >
                 Roy Kachani
               </a>
