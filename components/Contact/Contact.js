@@ -75,7 +75,8 @@ const Contact = ({ text, info }) => {
               <div className={styles.contact_email}>
                 <h4 className={styles.email}>
                   <a
-                  // href={`mailto:${info}`}
+                    // href={`mailto:${info}`}
+                    aria-label="contact email"
                   >
                     {info}
                   </a>
