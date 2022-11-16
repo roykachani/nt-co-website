@@ -10,7 +10,7 @@ export const useNearScreen = (distance = '100px', thrsH = 0, s) => {
         if (entry.isIntersecting) {
           setShow(true);
           if (thrsH != 0) {
-            entry.target.classList.toggle(s, entry.isIntersecting);
+            entry.target.classList.add(s, entry.isIntersecting);
           }
           observer.unobserve(fromRef.current);
         }
