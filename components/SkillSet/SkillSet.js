@@ -3,10 +3,11 @@ import { useState } from 'react';
 import { useScrollText } from '../../hook/useScrollText';
 import TextPrinter from '../TextPrinter/TextPrinter';
 import Card from '../Card';
+import CardMobile from '../Card/CardMobile';
 
 import styles from './SkillSet.module.css';
 
-const SkillSet = ({ skills, texts }) => {
+const SkillSet = ({ skills, texts, width }) => {
   const [showText, setShowText] = useState(true);
 
   useScrollText(
@@ -44,9 +45,13 @@ const SkillSet = ({ skills, texts }) => {
           </div>
           <div className={styles.skill_cards_container}>
             <div className={styles.wrapper_cards}>
-              {skills.map((skill, index) => (
-                <Card key={index} skill={skill} />
-              ))}
+              {!width
+                ? skills.map((skill, index) => (
+                    <Card key={index} skill={skill} width={width} />
+                  ))
+                : skills.map((skill, index) => (
+                    <CardMobile key={index} skill={skill} width={width} />
+                  ))}
             </div>
           </div>
         </div>
